@@ -1,8 +1,14 @@
+/// <reference types="react" />
 import { JsonLdProps } from './jsonld';
 import type { CreativeWork } from 'src/types';
 export interface CollectionPageJsonLdProps extends JsonLdProps {
-    name: string;
-    hasPart: CreativeWork[];
+  name: string;
+  hasPart: CreativeWork[];
 }
-declare function CollectionPageJsonLd({ type, keyOverride, hasPart, ...rest }: CollectionPageJsonLdProps): JSX.Element;
+declare function CollectionPageJsonLd({
+  type,
+  keyOverride,
+  hasPart,
+  ...rest
+}: CollectionPageJsonLdProps): JSX.Element;
 export default CollectionPageJsonLd;
