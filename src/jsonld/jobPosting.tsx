@@ -86,7 +86,7 @@ function JobPostingJsonLd({
     org: HiringOrganization | HiringOrganizationType,
   ) {
     if (org === HiringOrganizationType.confidential) {
-      return org;
+      return HiringOrganizationType.confidential;
     }
 
     return {
