@@ -1,5 +1,6 @@
 import React from 'react';
 import { JobPostingJsonLd } from '../../..';
+import { HiringOrganizationType } from '../../../lib/jsonld/jobPosting';
 
 function JobPosting() {
   return (
@@ -58,6 +59,29 @@ function JobPosting() {
         validThrough="2020-01-06"
         applicantLocationRequirements="FR"
         keyOverride="second-job-posting-with-salary-range"
+      />
+
+      <JobPostingJsonLd
+        datePosted="2020-01-06T03:37:40Z"
+        description="Confidential Company is looking for a software developer...."
+        hiringOrganization={HiringOrganizationType.confidential}
+        jobLocation={{
+          streetAddress: '17 street address',
+          addressLocality: 'Paris',
+          addressRegion: 'Ile-de-France',
+          postalCode: '75001',
+          addressCountry: 'France',
+        }}
+        title="Job Title"
+        baseSalary={{
+          currency: 'EUR',
+          value: 40,
+          unitText: 'HOUR',
+        }}
+        employmentType="FULL_TIME"
+        jobLocationType="TELECOMMUTE"
+        validThrough="2020-01-06"
+        applicantLocationRequirements="FR"
       />
     </>
   );

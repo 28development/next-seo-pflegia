@@ -14,6 +14,7 @@ describe('Job Posting JSON-LD', () => {
     cy.visit('http://localhost:3000/jsonld/jobPosting');
     cy.get('head script[type="application/ld+json"]').then(tags => {
       const jsonLD = JSON.parse(tags[0].innerHTML);
+      console.log(jsonLD);
       expect(jsonLD).to.deep.equal({
         '@context': 'https://schema.org',
         '@type': 'JobPosting',
@@ -56,6 +57,13 @@ describe('Job Posting JSON-LD', () => {
         validThrough: '2020-01-06',
         title: 'Job Title',
       });
+    });
+  });
+
+  it('Renders with a confidential props', () => {
+    cy.visit('http://localhost:3000/jsonld/jobPosting');
+    cy.get('head script[type="application/ld+json"]').then(tags => {
+      const jsonLD = JSON.parse()
     });
   });
 
