@@ -36,7 +36,7 @@ export interface JobPostingJsonLdProps extends JsonLdProps {
   description: string;
   hiringOrganization: HiringOrganization | HiringOrganizationType;
   title: string;
-  validThrough: string;
+  validThrough?: string;
   applicantLocationRequirements?: string;
   baseSalary?: MonetaryAmount;
   employmentType?: EmploymentType | EmploymentType[];
